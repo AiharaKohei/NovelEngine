@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>scene</key>
+	<array>
+		<dict>
+			<key>text</key>
+			<string>今大会、戦局を変えられる選手が今の日本にはいなかった。本田も香川も長友もダメ。頑張ってたのは個人的にはウッチーぐらい。初戦のドログバの存在感、プレッシャーありまくりだけどキレキレのネイマール、なんだかんだ決めるメッシ、コンディション悪いながらも望みをつなぐプレーを見せたクリロナ。闘志出しすぎて相手に噛みつくスアレス、そういった選手が日本から出てこないと。。。</string>
+		</dict>
+	</array>
+	<key>fork</key>
+	<dict>
+		<key>textA</key>
+		<string>Aに進む</string>
+		<key>nextSceneNameA</key>
+		<string>SceneA.plist</string>
+		<key>textB</key>
+		<string>離婚はIT化が遅れているやりがいのある分野！
+「今までありがとうございました」のデフォルト文言や「離婚ボタンを押すとどうなるの？」などデリケートな場面でのデリケートな心遣いにしびれる。雇用と婚姻はもっと流動性をあげればよい巡り会いも増える。</string>
+		<key>nextSceneNameB</key>
+		<string>SceneB.plist</string>
+	</dict>
+</dict>
+</plist>

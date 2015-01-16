@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>scene</key>
+	<array>
+		<dict>
+			<key>text</key>
+			<string>ここはシーンA
+asdfsdfa
+afdfdsa</string>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>―――　二年前
+「え？ 辞めちゃうの？」
+「はい…」
+ＰＭ８時ジャスト、この時間に決まって店長は奥の部屋に休憩に入る。
+ここは名の知れた商社の１階にあるオープンカフェ『スクラリ』
+オープンカフェとはいうが、今どきのスタバのような、フレーバーティーやキャラメルうんぬん……などというおしゃれなメニューはない、レトロな雰囲気の喫茶店。</string>
+			<key>bg</key>
+			<string>3.png</string>
+			<key>bgm</key>
+			<string>1.m4a</string>
+		</dict>
+		<dict>
+			<key>bg</key>
+			<string>1.png</string>
+			<key>text</key>
+			<string>制服は白シャツにひざ下のタイトスカート。黒のパンプス。化粧は禁止、髪は黒髪で１つにまとめる……。まあ、とにかく地味……というのも、このオカマ・・・な店長の、「男はみんなオオカミ」のモットウからきている。
+この商社に男性が多いことから、ここの店員が悪い虫に引っかからないように、という店長の配慮らしい。その徹底ぶりは、店内で偽名を使わなければいけないことからも伺える。</string>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>私はちなみに、千歳　杏実ちとせ　あみ……だけど名札には「アメ」と書かれている。
+なぜかというと……千歳杏実…あみ…あみ………アメ。……そう千歳飴からきている。
+（って小学生！？）
+まったく自分も男なのに、いったい何があったんだ……と突っ込みどころ満載だが、何よりスクラリのコーヒーや紅茶はおいしいので、商社社員には人気のカフェなのである。</string>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>あらためて……私。千歳　杏実。２５歳。
+身長は１５９センチ。
+真っ黒の長い髪に、平凡な顔つきと中肉中背。そして少し特徴のある黒縁メガネをかけている。
+事情があって、ここ数年おしゃれには無縁の生活。
+杏実はここでアルバイトを始めて、もう６年になる。ほとんど毎日働いていたこともあって、アルバイトとはいえ、ほとんどのことは１人でできるから、店長にも並ぶバリスタと言われている。</string>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>客足が途絶えたのを見計らって店長が休憩に入る準備をし始めた。杏実は店長を呼び止めると、前々から言わねばならなかったことを告げた。
+この春から、祖母のいる介護付き住居型有料老人ホームに、就職が決まったのだ。</string>
+		</dict>
+	</array>
+	<key>fork</key>
+	<dict>
+		<key>textA</key>
+		<string>Aに進む</string>
+		<key>nextSceneNameA</key>
+		<string></string>
+		<key>textB</key>
+		<string>Bに進む</string>
+		<key>nextSceneNameB</key>
+		<string>Bに進む</string>
+	</dict>
+</dict>
+</plist>
