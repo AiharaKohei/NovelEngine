@@ -12,6 +12,7 @@
 #include "cocos2d.h"
 #include "Utils.h"
 
+using namespace cocos2d;
 
 class ForkButtonDelefate
 {
@@ -30,7 +31,8 @@ public:
     
     CREATE_FUNC(TextNode);
     
-    void setText(const std::string &text, bool isContinuePrevLabel);
+    
+    void setText(const std::string &text, bool isContinuePrevLabel, bool isKeepNowText);
     void setInterval(float interval);
     void setOriginalPosition(cocos2d::Point originalPoint) {
         originalPoint_ = originalPoint;
@@ -49,6 +51,7 @@ public:
         return isShowButton;
     };
     void renewTextLabel(float dt);
+    void setCursorPosition(bool isKeepNowText);
     
 private:
     int strLengthEnd_;
@@ -59,6 +62,9 @@ private:
     cocos2d::Label *nowLabel_;
     cocos2d::Vector<cocos2d::Label*> labelVector_;
     ForkButtonDelefate *delegate_;
+    Label *cursorLabel;
+    bool isKeepNowText_;
+    
     
     void addLabel();
     void pressForkButton(Ref *obj);
@@ -69,6 +75,7 @@ private:
     bool didTextDisplay;
     bool isShowButton;
     bool isContinuePrevLabel_;
+    
     
 };
 

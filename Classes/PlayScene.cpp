@@ -76,7 +76,7 @@ void PlayScene::setDefaults(){
     }
 
     //最初のplist取得
-    std::string path = StringUtils::format("res/scene/Scene0.plist");
+    std::string path = StringUtils::format("res/scene/Scene1.plist");
     plistMap = FileUtils::getInstance()->getValueMapFromFile(path.c_str());
     sceneVector.clear();
     sceneVector = plistMap.at("scene").asValueVector();
@@ -86,6 +86,21 @@ void PlayScene::setDefaults(){
 
 
 void PlayScene::setScene(){
+    log("set scene");
+    
+    //分岐だったら
+    ValueMap::iterator it2 = plistMap.find("fork");
+    if (it2 != plistMap.end()) {
+        ValueMap map = plistMap.at("fork").asValueMap();
+        pTextNode->addButton(map.at("textA").asString(),
+                             map.at("textB").asString(),
+                             map.at("nextSceneNameA").asString(),
+                             map.at("nextSceneNameB").asString()
+                             );
+    }
+    log("add button");
+    return;
+    
     
     //分岐じゃなかったら
     ValueMap::iterator it = plistMap.find("nextSceneName");
@@ -106,18 +121,7 @@ void PlayScene::setScene(){
             this->setCut();
         }
     }
-    return;
-    
-    //分岐だったら
-    ValueMap::iterator it2 = plistMap.find("fork");
-    if (it2 != plistMap.end()) {
-        ValueMap map = plistMap.at("fork").asValueMap();
-        pTextNode->addButton(map.at("textA").asString(),
-                             map.at("textB").asString(),
-                             map.at("nextSceneNameA").asString(),
-                             map.at("nextSceneNameB").asString()
-                             );
-    }
+    log("next scene");
     return;
 }
 
@@ -143,6 +147,7 @@ void PlayScene::setSceneFromFork(std::string plistName){
 
 
 void PlayScene::setCut(){
+    log("set cut");
     cutMap.clear();
     if (static_cast<int>(sceneVector.size()) > cutCount) {
         cutMap = sceneVector.at(cutCount).asValueMap();
@@ -212,10 +217,11 @@ int PlayScene::findIndexFromText(std::string &text){
 }
 
 void PlayScene::setText(){
+    log("set text");
     if (!textVector.empty()) {
-        textParameter tParam = textVector.at(0);
+        textParameter tParam = textVector.front();
         textVector.erase(textVector.begin());
-        pTextNode->setText(tParam.text, tParam.isContinue);
+        pTextNode->setText(tParam.text, tParam.isContinue, textVector.front().isContinue);
         if (isFirstText) {
             pTextNode->run();
             isFirstText = false;

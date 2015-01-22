@@ -267,19 +267,19 @@ void MenuItemLabel::selected()
     {
         MenuItem::selected();
         
-        Action *action = getActionByTag(kZoomActionTag);
-        if (action)
-        {
-            this->stopAction(action);
-        }
-        else
-        {
-            _originalScale = this->getScale();
-        }
-        
-        Action *zoomAction = ScaleTo::create(0.1f, _originalScale * 1.2f);
-        zoomAction->setTag(kZoomActionTag);
-        this->runAction(zoomAction);
+//        Action *action = getActionByTag(kZoomActionTag);
+//        if (action)
+//        {
+//            this->stopAction(action);
+//        }
+//        else
+//        {
+//            _originalScale = this->getScale();
+//        }
+//        
+//        Action *zoomAction = ScaleTo::create(0.1f, _originalScale * 1.2f);
+//        zoomAction->setTag(kZoomActionTag);
+//        this->runAction(zoomAction);
     }
 }
 
@@ -289,10 +289,10 @@ void MenuItemLabel::unselected()
     if(_enabled)
     {
         MenuItem::unselected();
-        this->stopActionByTag(kZoomActionTag);
-        Action *zoomAction = ScaleTo::create(0.1f, _originalScale);
-        zoomAction->setTag(kZoomActionTag);
-        this->runAction(zoomAction);
+//        this->stopActionByTag(kZoomActionTag);
+//        Action *zoomAction = ScaleTo::create(0.1f, _originalScale);
+//        zoomAction->setTag(kZoomActionTag);
+//        this->runAction(zoomAction);
     }
 }
 
